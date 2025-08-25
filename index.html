@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>王宇 - AI开发/算法工程师</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        main: '#2D3748',
+                        accent: '#4A5568',
+                        light: '#F7FAFC'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .section-divider {
+                width: 60px;
+                height: 2px;
+                background-color: #4A5568;
+                margin: 1.5rem 0;
+            }
+            .text-balance {
+                text-wrap: balance;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white text-main font-sans">
+    <!-- 导航栏 -->
+    <nav class="fixed w-full bg-white border-b border-gray-200 z-40">
+        <div class="container mx-auto px-4 md:px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-xl font-bold">王宇</a>
+                <!-- 桌面导航 -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#profile" class="text-accent hover:text-main transition-colors">个人概况</a>
+                    <a href="#education" class="text-accent hover:text-main transition-colors">教育背景</a>
+                    <a href="#projects" class="text-accent hover:text-main transition-colors">项目经历</a>
+                    <a href="#internship" class="text-accent hover:text-main transition-colors">实习经历</a>
+                    <a href="#skills" class="text-accent hover:text-main transition-colors">技能证书</a>
+                    <a href="#contact" class="text-accent hover:text-main transition-colors">联系信息</a>
+                </div>
+                <!-- 移动端导航按钮 -->
+                <button id="mobileNavBtn" class="md:hidden text-main">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+            <!-- 移动端导航菜单 -->
+            <div id="mobileNav" class="md:hidden hidden mt-4 pb-2">
+                <div class="flex flex-col space-y-3">
+                    <a href="#profile" class="text-accent hover:text-main transition-colors py-1">个人概况</a>
+                    <a href="#education" class="text-accent hover:text-main transition-colors py-1">教育背景</a>
+                    <a href="#projects" class="text-accent hover:text-main transition-colors py-1">项目经历</a>
+                    <a href="#internship" class="text-accent hover:text-main transition-colors py-1">实习经历</a>
+                    <a href="#skills" class="text-accent hover:text-main transition-colors py-1">技能证书</a>
+                    <a href="#contact" class="text-accent hover:text-main transition-colors py-1">联系信息</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 头部信息 -->
+    <header class="pt-28 pb-16 bg-light">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-3xl md:text-4xl font-bold mb-4">王 宇</h1>
+                <p class="text-accent text-lg mb-6">东南大学集成电路科学与工程硕士研究生 | 研究方向：AI agent</p>
+                <div class="flex flex-wrap justify-center gap-4 text-sm text-accent">
+                    <span>2004-01-05</span>
+                    <span>吉林四平</span>
+                    <span>中共党员</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 个人概况 -->
+    <section id="profile" class="py-16">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-2xl font-bold mb-2">个人概况</h2>
+                <div class="section-divider"></div>
+                <p class="text-accent leading-relaxed">
+                    本科就读于东南大学新能源科学与工程专业，现攻读集成电路科学与工程硕士学位，研究方向为AI agent。具备扎实的数理基础（概率论、高等数学等课程高分）与编程能力，熟悉AI模型开发、数据处理及工程落地流程。曾主持校级科研项目2项，参与企业IC-RAG项目开发，注重理论与实践结合，致力于AI技术在集成电路领域的工程应用。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 教育背景 -->
+    <section id="education" class="py-16 bg-light">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-2xl font-bold mb-2">教育背景</h2>
+                <div class="section-divider"></div>
+
+                <!-- 硕士教育 -->
+                <div class="mb-10">
+                    <div class="flex flex-wrap justify-between items-start mb-3">
+                        <h3 class="text-xl font-semibold">东南大学 | 集成电路科学与工程（硕士研究生）</h3>
+                        <span class="text-accent">2025.09-2028.06</span>
+                    </div>
+                    <p class="text-accent mb-2">江苏 无锡 | 国家ASIC工程中心</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                        <div>
+                            <span class="font-medium">研究方向：</span>
+                            <span class="text-accent">AI agent</span>
+                        </div>
+                        <div>
+                            <span class="font-medium">导师：</span>
+                            <span class="text-accent">杨军、戚隆宁</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 本科教育 -->
+                <div>
+                    <div class="flex flex-wrap justify-between items-start mb-3">
+                        <h3 class="text-xl font-semibold">东南大学 | 新能源科学与工程（本科）</h3>
+                        <span class="text-accent">2021.09-2025.06</span>
+                    </div>
+                    <p class="text-accent mb-4">江苏 南京 | 985、双一流高校</p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <h4 class="font-medium mb-2">核心课程（高分）</h4>
+                            <ul class="text-accent space-y-1 text-sm">
+                                <li>概率论与数理统计 (95)</li>
+                                <li>数字电子电路基础 (95)</li>
+                                <li>可编程控制器技术与系统 (95)</li>
+                                <li>计算机控制技术与系统 (93)</li>
+                                <li>高等数学 (93)</li>
+                                <li>自动控制原理 (91)</li>
+                                <li>程序设计与算法语言 (90)</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-medium mb-2">个人荣誉</h4>
+                            <ul class="text-accent space-y-1 text-sm">
+                                <li>东南大学三好学生</li>
+                                <li>东南大学优秀共青团干部</li>
+                                <li>军训优秀学员</li>
+                                <li>国家励志奖学金</li>
+                                <li>东南大学至善学子奖</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-4 text-sm">
+                        <div>
+                            <span class="font-medium">GPA：</span>
+                            <span class="text-accent">3.52/4.00</span>
+                        </div>
+                        <div>
+                            <span class="font-medium">成绩均分：</span>
+                            <span class="text-accent">87.81/100</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 项目经历 -->
+    <section id="projects" class="py-16">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-2xl font-bold mb-2">项目经历</h2>
+                <div class="section-divider"></div>
+
+                <!-- 项目1 -->
+                <div class="mb-10 p-5 border border-gray-100 bg-white shadow-sm rounded-lg">
+                    <div class="flex flex-wrap justify-between items-start mb-3">
+                        <h3 class="text-lg font-semibold">基于大语言模型的太阳能光伏发电预测研究（校级）</h3>
+                        <span class="text-accent text-sm">2024.11-2025.06</span>
+                    </div>
+                    <p class="text-sm font-medium mb-3">第一负责人</p>
+
+                    <div class="mb-4">
+                        <h4 class="font-medium text-sm mb-2">项目概述</h4>
+                        <p class="text-accent text-sm leading-relaxed">
+                            构建高精度、高泛化能力的光伏发电功率预测模型，融合大语言模型（BERT）突破传统模型处理非线性、动态数据的局限性，实现数值与文本多模态融合，为电网调度和能源管理提供可靠预测依据。
+                        </p>
+                    </div>
+
+                    <div>
+                        <h4 class="font-medium text-sm mb-2">项目职责</h4>
+                        <ul class="text-accent text-sm space-y-2 leading-relaxed">
+                            <li>负责数据处理、特征工程、模型研发到实验验证的完整AI pipeline；</li>
+                            <li>模型预测精度显著提升，关键指标：RMSE=0.0336、MAE=0.0206、R²=0.9855；</li>
+                            <li>确保模型在多种天气条件下保持稳定表现。</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 项目2 -->
+                <div class="p-5 border border-gray-100 bg-white shadow-sm rounded-lg">
+                    <div class="flex flex-wrap justify-between items-start mb-3">
+                        <h3 class="text-lg font-semibold">风速风向在线监测技术及装置（校级）</h3>
+                        <span class="text-accent text-sm">2022.11-2023.12</span>
+                    </div>
+                    <p class="text-sm font-medium mb-3">第一负责人</p>
+
+                    <div class="mb-4">
+                        <h4 class="font-medium text-sm mb-2">项目概述</h4>
+                        <p class="text-accent text-sm leading-relaxed">
+                            利用互相关算法设计风量测量装置，通过自主设计传感器构件和测风算法，实现在线监测风速与风向，为气象观测与风能评估提供可靠数据支持。
+                        </p>
+                    </div>
+
+                    <div>
+                        <h4 class="font-medium text-sm mb-2">项目职责</h4>
+                        <ul class="text-accent text-sm space-y-2 leading-relaxed">
+                            <li>负责传感器构件设计与测风算法调试；</li>
+                            <li>完成整机装配及现场测试；</li>
+                            <li>装置测量准确率超过市场平均水平，具备稳定性高、工程可落地的技术优势。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 实习经历 -->
+    <section id="internship" class="py-16 bg-light">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-2xl font-bold mb-2">实习经历</h2>
+                <div class="section-divider"></div>
+
+                <div class="p-5 border border-gray-100 bg-white shadow-sm rounded-lg">
+                    <div class="flex flex-wrap justify-between items-start mb-3">
+                        <h3 class="text-lg font-semibold">南京低功耗芯片技术研究院有限公司</h3>
+                        <span class="text-accent text-sm">2025.06-2025.09</span>
+                    </div>
+                    <p class="text-sm font-medium mb-3">AI agent 算法工程师 | IC-RAG 项目（集成电路知识检索系统）</p>
+
+                    <div class="mb-4">
+                        <h4 class="font-medium text-sm mb-2">项目概述</h4>
+                        <p class="text-accent text-sm leading-relaxed">
+                            解决集成电路领域技术文档专业性强、结构复杂导致的知识获取难题，自研基于RAG的知识库与智能问答系统，通过解析非结构化文档构建知识图谱，采用混合检索策略提升专业问答准确性与可靠性。
+                        </p>
+                    </div>
+
+                    <div>
+                        <h4 class="font-medium text-sm mb-2">实习职责</h4>
+                        <ul class="text-accent text-sm space-y-2 leading-relaxed">
+                            <li>负责PdfParser模块开发，使用PyMuPDF、pdfplumber实现PDF文档的文本/图表/目录提取与树状结构构建；</li>
+                            <li>设计动态内存加载与分块处理机制，支持大型PDF的高效结构化抽取；</li>
+                            <li>为知识图谱与混合检索提供高质量输入数据。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 技能证书 -->
+    <section id="skills" class="py-16">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-2xl font-bold mb-2">技能证书</h2>
+                <div class="section-divider"></div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">语言能力</h3>
+                        <ul class="text-accent space-y-3">
+                            <li class="flex justify-between">
+                                <span>CET-4</span>
+                                <span>已通过</span>
+                            </li>
+                            <li class="flex justify-between">
+                                <span>CET-6</span>
+                                <span>已通过</span>
+                            </li>
+                            <li class="flex justify-between">
+                                <span>普通话</span>
+                                <span>二级甲等</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">专业技能</h3>
+                        <div class="mb-3">
+                            <h4 class="font-medium text-sm mb-2">证书</h4>
+                            <p class="text-accent text-sm">计算机二级证书</p>
+                        </div>
+                        <div class="mb-3">
+                            <h4 class="font-medium text-sm mb-2">编程语言</h4>
+                            <p class="text-accent text-sm">C++、Python</p>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-sm mb-2">软件工具</h4>
+                            <p class="text-accent text-sm">Pycharm、VScode、Quartus II、Matlab、Dify、Docker</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8">
+                    <h3 class="text-lg font-semibold mb-4">其他评价</h3>
+                    <p class="text-accent text-sm leading-relaxed">
+                        热爱体育事业，身体素质优秀，大学期间所有体育成绩均在90分以上，曾获东南大学“优秀跑操个人”称号，具备良好的自律性与团队协作意识。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系信息 -->
+    <section id="contact" class="py-16 bg-light">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-2xl font-bold mb-2">联系信息</h2>
+                <div class="section-divider"></div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <ul class="text-accent space-y-4">
+                            <li class="flex items-center">
+                                <span class="font-medium mr-2">电话：</span>
+                                <span>150-0443-9861</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="font-medium mr-2">邮箱：</span>
+                                <span>3386844982@qq.com</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="font-medium mr-2">意向岗位：</span>
+                                <span>AI开发/算法工程师</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">沟通留言</h3>
+                        <form class="space-y-4">
+                            <div>
+                                <input type="text" placeholder="您的姓名" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-accent">
+                            </div>
+                            <div>
+                                <input type="email" placeholder="您的邮箱" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-accent">
+                            </div>
+                            <div>
+                                <textarea rows="3" placeholder="留言内容" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-accent"></textarea>
+                            </div>
+                            <button type="submit" class="px-4 py-2 bg-accent text-white rounded-md hover:bg-main transition-colors">发送留言</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="py-8 bg-main text-white">
+        <div class="container mx-auto px-4 md:px-6 text-center text-sm">
+            <p>© 2028 王宇. 保留所有权利.</p>
+        </div>
+    </footer>
+
+    <!-- 基础交互脚本 -->
+    <script>
+        // 移动端导航切换
+        document.getElementById('mobileNavBtn').addEventListener('click', function() {
+            const mobileNav = document.getElementById('mobileNav');
+            mobileNav.classList.toggle('hidden');
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    // 关闭移动端导航
+                    document.getElementById('mobileNav').classList.add('hidden');
+                }
+            });
+        });
+
+        // 表单提交提示
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('留言已提交，将尽快回复您！');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
